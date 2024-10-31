@@ -1,0 +1,133 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif; /* Use a modern sans-serif font */
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Darker text for readability */
+  }
+  
+  /* Main category section */
+  .category {
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 2rem auto; /* Center the container with auto margins */
+    padding: 2rem; /* Add padding */
+    background-color: #fff; /* White background for the form and cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Title styling */
+  .secTitle {
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center the title */
+  }
+  
+  .title {
+    font-size: 2rem; /* Larger font size for the title */
+    color: #333; /* Dark color for title */
+  }
+  
+  /* Form styling */
+  .category-form {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between form fields */
+    margin-bottom: 2rem; /* Space below the form */
+  }
+  
+  .category-form input {
+    padding: 1rem; /* Padding for inputs */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Consistent font size */
+    transition: border-color 0.3s; /* Smooth transition for focus */
+  }
+  
+  .category-form input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Button styles */
+  .category-form button {
+    padding: 1rem; /* Padding for buttons */
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Consistent font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+  }
+  
+  .category-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Grid layout for category cards */
+  .secContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Space between cards */
+  }
+  
+  /* Individual category card */
+  .singleCategory {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Padding inside card */
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .singleCategory:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+  }
+  
+  /* Card information styles */
+  .cardInfo {
+    flex-grow: 1; /* Allow card info to grow */
+  }
+  
+  .categoryName {
+    font-size: 1.5rem; /* Larger font for category name */
+    font-weight: bold; /* Bold font for emphasis */
+    margin-bottom: 0.5rem; /* Space below name */
+  }
+  
+  .categoryDesc {
+    font-size: 1rem; /* Standard font size for description */
+    color: #666; /* Lighter color for description text */
+    margin-bottom: 1rem; /* Space below description */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .category {
+      padding: 1rem; /* Less padding on smaller screens */
+    }
+  
+    .category-form input {
+      font-size: 0.9rem; /* Slightly smaller font size */
+    }
+  
+    .category-form button {
+      font-size: 0.9rem; /* Slightly smaller button font size */
+    }
+  
+    .categoryName {
+      font-size: 1.2rem; /* Smaller font size for name on mobile */
+    }
+  
+    .categoryDesc {
+      font-size: 0.9rem; /* Smaller font size for description on mobile */
+    }
+  }
+  

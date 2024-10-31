@@ -1,0 +1,121 @@
+/* activity.css */
+
+.activity {
+    padding: 20px;
+  }
+  
+  .secTitle {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .secTitle .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .activity-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .activity-form input,
+  .activity-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .activity-form input[type="file"] {
+    border: none;
+  }
+  
+  .activity-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .activity-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .secContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .singleActivity {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .singleActivity:hover {
+    transform: translateY(-5px);
+  }
+  
+  .imageDiv {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .imageDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cardInfo {
+    padding: 15px;
+  }
+  
+  .activityTitle {
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .activityTitle:hover {
+    text-decoration: underline;
+  }
+  
+  .discount {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .activity-form {
+      flex-direction: column;
+    }
+  
+    .activity-form input,
+    .activity-form textarea {
+      font-size: 0.9rem;
+    }
+  
+    .secTitle .title {
+      font-size: 1.5rem;
+    }
+  
+    .activity-form button {
+      font-size: 0.9rem;
+    }
+  
+    .singleActivity {
+      border-radius: 4px;
+    }
+  }
+  

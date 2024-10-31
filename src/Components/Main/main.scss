@@ -1,0 +1,177 @@
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+    --cardHover: rgb(255, 255, 255);
+  }
+  
+  .main {
+    width: 100%;
+  
+    .secTitle {
+      .title {
+        position: relative;
+        width: max-content;
+        color: var(--textColor);
+        margin: 1rem 0;
+        z-index: 2;
+  
+        &::after {
+          position: absolute;
+          content: '';
+          background: var(--SecondaryColor);
+          height: 5px;
+          width: 120px;
+          right: 0;
+          bottom: 5px;
+          z-index: -1;
+        }
+      }
+    }
+  
+    .secContent {
+      display: grid; // Use CSS Grid for layout
+      grid-template-columns: repeat(3, 1fr); // Three columns for desktop
+      gap: 1.5rem; // Space between grid items
+  
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // Two columns for tablets
+      }
+  
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr; // One column for mobile
+      }
+  
+      .singleDestination {
+        height: 100%;
+        display: flex; // Use flexbox for inner content
+        flex-direction: column; // Stack content vertically
+        border-radius: 10px;
+        background: var(--cardBG);
+        box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+        overflow: hidden;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+  
+        &:hover {
+          background: var(--cardHover);
+          box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+        }
+  
+        .imageDiv {
+          height: 200px; // Fixed height for all images
+          width: 100%; // Full width
+          overflow: hidden;
+  
+          img {
+            height: 100%; // Cover entire height
+            width: 100%; // Cover entire width
+            object-fit: cover; // Maintain aspect ratio
+            transition: transform 0.2s ease; // Transition effect for scaling
+          }
+  
+          &:hover {
+            img {
+              transform: scale(1.1); // Scale on hover
+            }
+          }
+        }
+  
+        .cardInfo {
+          padding: 1rem;
+  
+          .destTitle {
+            color: var(--blackColor);
+            font-size: 1.25rem;
+          }
+  
+          .continent {
+            gap: 0.5rem;
+  
+            .icon {
+              color: var(--textColor);
+              font-size: 18px;
+            }
+  
+            .name {
+              color: var(--textColor);
+              font-weight: 400;
+              font-size: 14px;
+            }
+          }
+  
+          .fees {
+            width: 100%;
+            justify-content: space-between;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-top: 1.5px solid var(--greyText);
+            border-bottom: 1.5px solid var(--greyText);
+  
+            .grade {
+              color: var(--textColor);
+              max-width: 100px;
+              line-height: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              small {
+                text-align: center;
+                background: var(--gradientColor);
+                border-radius: 1rem;
+                color: var(--whiteColor);
+                padding: 1px 10px;
+                font-size: 10px;
+              }
+            }
+  
+            .price {
+              font-size: 2rem;
+              color: var(--blackColor);
+            }
+          }
+  
+          .desc {
+            font-size: 13.5px;
+            color: var(--textColor);
+            font-weight: 500;
+          }
+  
+          .btn {
+            margin-top: 1rem;
+            color: var(--whiteColor);
+            font-weight: 600;
+            justify-content: space-between;
+            gap: 0.5rem;
+  
+            .icon {
+              align-self: center;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive Styles
+  @media (max-width: 768px) {
+    .secTitle .title {
+      font-size: 1.5rem; // Adjust title size for smaller screens
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .secTitle .title {
+      font-size: 1.2rem; // Further reduce title size
+    }
+  }
+  
